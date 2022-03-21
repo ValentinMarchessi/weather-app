@@ -21,7 +21,7 @@ export default function WeatherCards() {
 	}
 
 	let orderedCards = [...storeCards].sort((a, b) => {
-		const map = {
+		const map: {[key: string]: number} = {
 			temp: a.temp - b.temp,
 			max: a.max - b.max,
 			min: a.min - b.min,
