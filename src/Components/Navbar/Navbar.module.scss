@@ -1,0 +1,33 @@
+@use "../../SASS/palette.scss" as Colors;
+
+#navbar{
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 10px;
+    height: 10vh;
+    background-color: Colors.$dark-blue;
+    border-radius: 0 0 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #name{
+        opacity: 0;
+        font-family: "Pacifico";
+        font-weight: 400;
+        font-size: 35px;
+        color: white;
+
+        animation: fade-in-from-top 1s ease 1s forwards;
+    }
+}
+
+@keyframes fade-in-from-top {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

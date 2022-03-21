@@ -1,0 +1,79 @@
+.card{
+    position: relative;
+    width: 200px;
+    padding: 10px;
+    background-color: #223035;
+    color: white;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    border: 1px solid rgba(170, 170, 170, 0.446);
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(91, 91, 91, 0.604);
+    #delete{
+        position: absolute;
+        top:2px; 
+        right:2px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: rgb(255, 106, 106);
+        span{
+            font-size: 15px;
+        }
+        &:hover{
+            background-color: rgb(255, 106, 106);
+            color: white;
+        }
+    }
+    .left{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        #icon{
+            width: fill-available;
+            aspect-ratio: 1/1;
+        }
+        #city{
+            align-self: flex-start;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        #country{
+            font-size: 10px;
+            align-self: flex-start;
+        }
+        #weather{
+            font-size: 14px;
+            font-style: italic;
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+            font-size: 14px;
+        }
+
+        .minmax{
+            h2{
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

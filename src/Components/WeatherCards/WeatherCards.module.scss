@@ -1,0 +1,77 @@
+@use "../../SASS/palette.scss" as Colors;
+
+section#weatherCards{
+    width: 95%;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    #search{
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+        justify-content: space-between;
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        #order{
+            .header{
+                font-size: 12px;
+                font-style: italic;
+            }
+            .options{
+                display: flex;
+                align-items: center;
+        
+                button{
+                    align-self: flex-end;
+                    border: none;
+                    font-size: 2.1rem;
+                    color: white;
+                    background-color: Colors.$dark-blue;
+                }
+            }
+        }
+        #searchbar{
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+    }
+    #cardContainer{
+        @media screen and (max-width: 2250px) {
+            grid-template-columns: 210px 210px 210px 210px 210px 210px 210px 210px;
+        }
+        @media screen and (min-width: 2040px) {
+            grid-template-columns: 210px 210px 210px 210px 210px 210px 210px;
+        }
+        @media screen and (max-width: 1830px) {
+            grid-template-columns: 210px 210px 210px 210px 210px 210px;
+        }
+        @media screen and (max-width: 1620px) {
+            grid-template-columns: 210px 210px 210px 210px 210px;
+        }
+        @media screen and (max-width: 1230px) {
+            grid-template-columns: 210px 210px 210px 210px;
+        }
+        @media screen and (max-width: 970px) {
+            grid-template-columns: 210px 210px 210px;
+        }
+        @media screen and (max-width: 740px) {
+            grid-template-columns: 210px 210px;
+        }
+        @media screen and (max-width: 480px) {
+            grid-template-columns: 210px;
+            justify-content: center;
+        }
+        gap: 1em;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 210px 210px 210px 210px 210px;
+        justify-content: space-between;
+    }
+    margin-bottom: 80px;
+}

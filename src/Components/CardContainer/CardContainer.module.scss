@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    //grid-template-columns: auto auto auto auto auto;
+    flex-wrap: wrap;
+}
+#drawerWrapper{
+    user-select: none;
+    cursor:pointer;
+}
+
+@keyframes fade-in-from-top {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

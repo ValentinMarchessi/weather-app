@@ -1,0 +1,74 @@
+@use "../../SASS/palette.scss" as Colors;
+
+#addCard{
+    span{
+        color: white;
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 40px;
+        background-color: Colors.$green;
+        aspect-ratio: 1/1;
+
+    }
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    transition: all .4s ease;
+
+    &:hover span{
+        background-color: Colors.$light-green;
+    }
+}
+
+#modal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 3em;
+    background-color: Colors.$selago;
+    border-radius: 10px;
+    gap: 10px;
+
+    #header{
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 300;
+        color:rgb(77, 77, 77);
+        position: absolute;
+        top:10px;
+        left:15px;
+    }
+
+    #close{
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        span{
+            font-size: 15px;
+            color: white;
+            background-color: Colors.$light-red;
+            border-radius: 45%;
+            padding: 3px;
+        }
+    }
+
+    .queryStatus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .spinner{
+            stroke: #7aaccd;
+        }
+        #error{
+            color: rgb(255, 85, 85);
+        }
+    }
+
+}

@@ -1,0 +1,36 @@
+$main-color: rgb(0, 0, 0);
+
+.container{
+    position: relative;
+    margin-top: 2em;
+    label{
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 2;
+        top: 1.1em;
+        left: .5em;
+        position: absolute;
+        padding: 2px .4em;
+        pointer-events: none;
+
+        transition: top .1s ease-in-out, left .1s ease-in-out;
+    } 
+
+    input{
+        color: black;
+        font-size: 1.2rem;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        padding: 15px 20px;
+        background-color: transparent;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        transition: all .5s ease;
+        &:focus-visible{
+            outline: 1px solid rgb(40, 35, 82);
+        }
+    }
+    &:focus-within label, label.active{
+        top: -1.7em;
+        left: 0;
+    }
+}

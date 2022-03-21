@@ -1,0 +1,18 @@
+#searchbar {
+	display: flex;
+    border: solid 1px rgb(99, 99, 99);
+    border-radius: 5px;
+    overflow: hidden;
+
+    input[type=text]{
+        border: none;
+        text-indent: .4em;
+    }
+
+	button[type=submit] {
+        border: none;
+        &:active{
+            background-color: bisque;
+        }
+	}
+}
