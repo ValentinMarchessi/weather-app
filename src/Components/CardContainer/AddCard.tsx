@@ -13,8 +13,10 @@ export default function AddCard() {
 
 	function handleSearch(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
-		const searchInput = event.currentTarget.firstElementChild;
-		dispatch(fetchCard(searchInput?.value));
+		const form = new FormData(event.currentTarget);
+		for (const field of form.entries()) {
+			if (field[0] === "city") dispatch(fetchCard(String(field[1])));
+		}
 		setSearched(true);
 		setTimeout(() => {
 			setSearched(false);
