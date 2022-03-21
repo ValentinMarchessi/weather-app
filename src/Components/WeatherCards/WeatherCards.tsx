@@ -1,17 +1,14 @@
 import styles from "./WeatherCards.module.scss";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState, store } from "../../Redux/store";
+import { RootState } from "../../Redux/store";
 import { CardContainer, WeatherCard, Radio } from "../";
 import { useInput } from "../../Helpers/Hooks";
 
-type OrderOptions = "temp" | "max" | "min";
-type DirectionOptions = "asc" | "desc";
-
 export default function WeatherCards() {
 	const storeCards = useSelector((store: RootState) => store.cards.loaded);
-	const [order, setOrder] = useState<OrderOptions>("temp");
-	const [direction, setDirection] = useState<DirectionOptions>("asc");
+	const [order, setOrder] = useState<string>("temp");
+	const [direction, setDirection] = useState<string>("asc");
 	const [searchbar, handleSearchbar] = useInput("")
 
 	function toggleDirection() {
